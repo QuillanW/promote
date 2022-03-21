@@ -220,9 +220,10 @@
 
             <?php
                 foreach ($sports as $id => $sport) {
+                    $name = $sports.name;
                     echo "
                         <button class='sport' name='sport' value='$id'>
-                            <h3>$sport.name</h3>
+                            <h3>$name</h3>
                             <picture>
                                 <img src='../media/sport/icons/$id.svg' alt='3$id'>
                             </picture>
