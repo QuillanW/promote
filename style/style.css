@@ -111,7 +111,8 @@ ul.submenu li > a:visited {
     transform:rotate(2deg);
     height: 40vh;
     z-index: 0;
-    margin-top: 5vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 .content2 p , .content2 h1{
     margin-left: 10vw;
@@ -126,7 +127,8 @@ div.parent{
     align-items: center;
     justify-content: center;
     vertical-align:middle;
-    
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 div.child{
     height: auto;
@@ -194,7 +196,7 @@ footer{
 }
 
 .footerimg{
-    height: 20vh;
+    height: 15vh;
     margin-top: 0vh;
 }
 .footerimg:hover{
