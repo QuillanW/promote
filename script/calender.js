@@ -11,7 +11,6 @@ searchDateInput.addEventListener('change', searchEvents)
 container.onload = updateEvents()
 
 function updateEvents() {
-    console.log('test')
     for (let i = 1; allEvents['event' + i]; i++) {
         //box
         var newEvent = document.createElement('div')
@@ -59,16 +58,42 @@ function updateEvents() {
 
 function searchEvents() {
     document.getElementById('noneFound').style.display = 'none'
-    let amountFound = 0
-    var searched = searchDateInput.value
     for (let i = 1; allEvents['event' + i]; i++) {
         if (allEvents['event' + i]['date'] != searched) {
-            document.getElementById('eventBox' + i).style.display = 'none'
-        } else {
-        amountFound++
+            document.getElementById('eventBox' + i).style.display = ''
         }
     }
-    if (amountFound == 0) {
-        document.getElementById('noneFound').style.display = 'block'
+    let amountFound = 0
+    var searched = searchDateInput.value
+    if (searched != '') {
+        for (let i = 1; allEvents['event' + i]; i++) {
+            if (allEvents['event' + i]['date'] != searched) {
+                document.getElementById('eventBox' + i).style.display = 'none'
+            } else {
+                amountFound++
+            }
+            
+            var yesterday = new Date(searched)
+            var tomorrow = new Date(searched)
+            yesterday.setDate(yesterday.getDate() - 1)
+            tomorrow.setDate(tomorrow.getDate() + 1)
+            if (new Date(allEvents['event' + i]['date']) == yesterday || new Date(allEvents['event' + i]['date']) == tomorrow) {
+                console.log('event close')
+                amountFound++
+            }
+
+            console.log(new Date(allEvents['event' + i]['date']))
+            console.log(yesterday)
+            console.log(tomorrow)
+            console.log(new Date(searched))
+
+            if ((new Date(allEvents['event' + i]['date'])).getTime == tomorrow.getTime) {
+                console.log('test')
+            }
+            
+            if (amountFound == 0) {
+                document.getElementById('noneFound').style.display = 'block'
+            }
+        }
     }
 }
