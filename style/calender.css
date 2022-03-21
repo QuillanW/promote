@@ -1,0 +1,6 @@
+#container {
+    width: max-content;
+    height: max-content;
+    display: grid;
+}
+
