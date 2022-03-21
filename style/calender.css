@@ -1,6 +1,62 @@
 #container {
-    width: max-content;
-    height: max-content;
+    width: 100vw;
+    height: 100vh;
     display: grid;
+    grid-template-columns: 3.5fr 6.5fr;
+    grid-template-areas: 'controls events';
+    font-family: sans-serif;
 }
 
+#controls {
+    grid-area: controls;
+    padding: 10px;
+}
+
+#events {
+    grid-area: events;
+    padding: 10px;
+}
+
+.eventBox {
+    width: 96%;
+    height: 200px;
+    padding: 5px;
+    margin: 5px;
+    border: solid black;
+    border-width: 3px 0px 3px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.eventBox:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 2px 2px lightgrey;
+}
+
+.eventBox:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 200px;
+    top: -3px;
+    left: 0;
+    border: solid white;
+    border-width: 3px 0px 3px;
+}
+
+.eventBox:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 200px;
+    top: -3px;
+    left: 80%;
+    border: solid white;
+    border-width: 3px 0px 3px;
+}
+
+.eventLocation {
+    color: rgb(167, 167, 167);
+}
