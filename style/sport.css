@@ -1,0 +1,11 @@
+picture, img {
+    max-width: 100%;
+}
+.sportList {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5pt;
+}
+h3 {
+    text-align: center;
+}
