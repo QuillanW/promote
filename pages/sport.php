@@ -216,11 +216,14 @@
 <body>
 
     <main>
-        <form class="sportList" method="get">
+        <?php
+        ?>
 
+        <form class="sportList" method="get">
             <?php
                 foreach ($sports as $id => $sport) {
-                    $name = $sports.name;
+                    print_r($sport);
+                    $name = $sport['name'];
                     echo "
                         <button class='sport' name='sport' value='$id'>
                             <h3>$name</h3>
@@ -231,27 +234,6 @@
                     ";
                 };
             ?>
-
-            <!-- <button class="sport" name="sport" value="3x3-basketball">
-                <h3>3x3 basketball</h3>
-                <picture>
-                    <img src="../media/sport/icons/3x3-basketball.svg" alt="3x3-basketball">
-                </picture>
-            </button> -->
-
-            <!-- <button class="sport" name="sport" value="archery">
-                <h3>Archery</h3>
-                <picture>
-                    <img src="../media/sport/icons/archery.svg" alt="archery">
-                </picture>
-            </button> -->
-
-            <!-- <button class="sport" name="sport" value="acrobatic-gymnastics">
-                <h3>Acrobatic Gymnastics</h3>
-                <picture>
-                    <img src="../media/sport/icons/acrobatic-gymnastics.svg" alt="archery">
-            </picture> -->
- 
         </form>
     </main>
 
