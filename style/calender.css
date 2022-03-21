@@ -19,13 +19,20 @@
 
 .eventBox {
     width: 96%;
-    height: 200px;
+    height: 160px;
     padding: 5px;
     margin: 5px;
     border: solid black;
     border-width: 3px 0px 3px;
     position: relative;
     transition: 0.5s;
+    display: grid;
+    grid-template-columns: 40px 2fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-areas:
+        'eventBoxLeft1 eventBoxLeft1 eventBoxRight1'
+        'mapIcon eventBoxLeft2 eventBoxRight2'
+        '. eventBoxLeft3 eventBoxRight3';
 }
 
 .eventBox:hover {
@@ -38,7 +45,7 @@
     display: block;
     position: absolute;
     width: 20%;
-    height: 200px;
+    height: 160px;
     top: -3px;
     left: 0;
     border: solid white;
@@ -50,13 +57,46 @@
     display: block;
     position: absolute;
     width: 20%;
-    height: 200px;
+    height: 160px;
     top: -3px;
     left: 80%;
     border: solid white;
     border-width: 3px 0px 3px;
 }
 
+.eventTitle {
+    grid-area: eventBoxLeft1;
+}
+
 .eventLocation {
     color: rgb(167, 167, 167);
+    grid-area: eventBoxLeft2;
+}
+
+.mapPinIcon {
+    height: 36px;
+    grid-area: mapIcon;
+}
+
+.eventInfo {
+    grid-area: eventBoxLeft3;
+}
+
+.eventTime {
+    text-align: center;
+    grid-area: eventBoxRight1;
+}
+
+.eventDay {
+    text-align: center;
+    grid-area: eventBoxRight2;
+}
+
+.eventMonth {
+    text-align: center;
+    grid-area: eventBoxRight3;
+}
+
+#noneFound {
+    display: none;
 }
