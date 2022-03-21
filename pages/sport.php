@@ -202,7 +202,7 @@
             "name" => "Wrestling",
         ),
     );
-    print_r($sports);
+    // print_r($sports);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -215,30 +215,44 @@
 </head>
 <body>
 
-    <!-- <main>
+    <main>
         <form class="sportList" method="get">
-            <button class="sport" name="sport" value="3x3-basketball">
+
+            <?php
+                foreach ($sports as $id => $sport) {
+                    echo "
+                        <button class='sport' name='sport' value='$id'>
+                            <h3>$sport.name</h3>
+                            <picture>
+                                <img src='../media/sport/icons/$id.svg' alt='3$id'>
+                            </picture>
+                        </button>
+                    ";
+                };
+            ?>
+
+            <!-- <button class="sport" name="sport" value="3x3-basketball">
                 <h3>3x3 basketball</h3>
                 <picture>
                     <img src="../media/sport/icons/3x3-basketball.svg" alt="3x3-basketball">
                 </picture>
-            </button>
+            </button> -->
 
-            <button class="sport" name="sport" value="archery">
+            <!-- <button class="sport" name="sport" value="archery">
                 <h3>Archery</h3>
                 <picture>
                     <img src="../media/sport/icons/archery.svg" alt="archery">
                 </picture>
-            </button>
+            </button> -->
 
-            <button class="sport" name="sport" value="acrobatic-gymnastics">
+            <!-- <button class="sport" name="sport" value="acrobatic-gymnastics">
                 <h3>Acrobatic Gymnastics</h3>
                 <picture>
                     <img src="../media/sport/icons/acrobatic-gymnastics.svg" alt="archery">
-            </picture>
+            </picture> -->
  
         </form>
-    </main> -->
+    </main>
 
 </body>
 </html>
