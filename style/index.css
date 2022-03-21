@@ -109,7 +109,7 @@ ul.submenu li > a:visited {
     top:-5%;
     margin-left:-5%;
     transform:rotate(2deg);
-    height: 40vh;
+    height: min-content;
     z-index: 0;
     margin-top: 10vh;
     margin-bottom: 10vh;
