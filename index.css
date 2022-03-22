@@ -33,6 +33,8 @@ header {
     margin-top: 0px;
 }
 
+/*Kopie dit*/
+
 nav{
     margin-top: -1px;
     width: 100vw;
@@ -66,7 +68,7 @@ nav{
     background-color: #3838384d;
     
 }
-ul.submenu{
+/* ul.submenu{
     position: absolute;
     background-color: #243c5379;
     list-style-type: none;
@@ -94,11 +96,12 @@ ul.submenu li > a {
 }
 ul.submenu li > a:visited {
     text-decoration: none;
-}
+} */
 .navClass li:hover .submenu{
     opacity: 1;
 }
 
+/*Kopie dit*/
 .content2{
     box-shadow:#E15566 0px 0px 10px 10px;
     background:linear-gradient(to left,#32353b, #4b5363, #32353b);
@@ -124,7 +127,7 @@ div.parent{
     align-items: center;
     justify-content: center;
     vertical-align:middle;
-    margin-top: 10vh;
+    margin-top: 5vh;
     margin-bottom: 10vh;
 }
 div.child{
