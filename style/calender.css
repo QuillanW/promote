@@ -53,11 +53,6 @@ h2 {
         '. eventBoxLeft3 eventBoxRight3';
 }
 
-.eventBox:hover {
-    transform: scale(1.01);
-    box-shadow: 2px 2px 2px 2px lightgrey;
-}
-
 .eventBox:before {
     content: '';
     display: block;
@@ -80,6 +75,11 @@ h2 {
     left: 80%;
     border: solid white;
     border-width: 7px 0px 9px;
+}
+
+.eventBox:hover {
+    transform: scale(1.01);
+    box-shadow: 2px 2px 2px 2px lightgrey;
 }
 
 .eventTitle {
