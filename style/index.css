@@ -200,3 +200,7 @@ footer{
    transform: scale(1.2);
    transition-duration: 1s;
 }
+
+#logo{
+    box-shadow:#32353b 0px 0px 30px 10px;
+}
