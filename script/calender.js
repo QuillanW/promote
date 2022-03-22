@@ -61,6 +61,7 @@ function searchEvents() {
     for (let i = 1; allEvents['event' + i]; i++) {
         if (allEvents['event' + i]['date'] != searched) {
             document.getElementById('eventBox' + i).style.display = ''
+            document.getElementById('eventBox' + i).classList.remove('eventClose')
         }
     }
     let amountFound = 0
@@ -73,22 +74,15 @@ function searchEvents() {
                 amountFound++
             }
             
+            var today = new Date(searched)
             var yesterday = new Date(searched)
             var tomorrow = new Date(searched)
             yesterday.setDate(yesterday.getDate() - 1)
             tomorrow.setDate(tomorrow.getDate() + 1)
-            if (new Date(allEvents['event' + i]['date']) == yesterday || new Date(allEvents['event' + i]['date']) == tomorrow) {
-                console.log('event close')
+            if (((new Date(allEvents['event' + i]['date'])).getTime() == yesterday.getTime() || (new Date(allEvents['event' + i]['date'])).getTime() == tomorrow.getTime()) && (new Date(allEvents['event' + i]['date'])).getTime() != today.getTime()) {
+                document.getElementById('eventBox' + i).classList.add('eventClose')
+                document.getElementById('eventBox' + i).style.display = ''
                 amountFound++
-            }
-
-            console.log(new Date(allEvents['event' + i]['date']))
-            console.log(yesterday)
-            console.log(tomorrow)
-            console.log(new Date(searched))
-
-            if ((new Date(allEvents['event' + i]['date'])).getTime == tomorrow.getTime) {
-                console.log('test')
             }
             
             if (amountFound == 0) {
