@@ -10,6 +10,10 @@ searchDateInput.addEventListener('change', searchEvents)
 
 container.onload = updateEvents()
 
+function createCalendar() {
+
+}
+
 function updateEvents() {
     for (let i = 1; allEvents['event' + i]; i++) {
         //box
