@@ -44,7 +44,7 @@ function updateEvents() {
         //date
         var newEventDate = new Date(allEvents['event' + i]['date'])
         //day
-        var newEventDay = document.createElement('h1')
+        var newEventDay = document.createElement('h2')
         newEventDay.classList.add('eventDay')
         newEventDay.innerHTML = weekdays[newEventDate.getDay()]
         newEvent.appendChild(newEventDay)
@@ -84,10 +84,9 @@ function searchEvents() {
                 document.getElementById('eventBox' + i).style.display = ''
                 amountFound++
             }
-            
-            if (amountFound == 0) {
-                document.getElementById('noneFound').style.display = 'block'
-            }
+        }
+        if (amountFound == 0) {
+            document.getElementById('noneFound').style.display = 'block'
         }
     }
 }
