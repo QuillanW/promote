@@ -8,7 +8,7 @@ const month = ["January", "February", "March", "April", "May", "June", "July", "
 
 searchDateInput.addEventListener('change', searchEvents)
 
-container.onload = updateEvents()
+container.onload = updateEvents(), createCalendar()
 
 function createCalendar() {
 
