@@ -3,9 +3,13 @@
         "Qatar" => array(
             "qualification-methode" => "Hosts",
             "previous-preformance" => " - ",
+            "rank" => 1,
+
             "players" => array(
-                "Name" => "",
-                "Age" => "",
+                "Name" => array(
+                    "age" => 23,
+                    "goals" => 0,
+                ),
             ),
         ),
     );
@@ -21,10 +25,11 @@
     <title>Teams</title>
 </head>
 <body>
-    <?php
-        foreach ($teams as $team) {
-            print_r($team)
-        }
-    ?>
+    <?php foreach ($teams as $team => $info): ?>
+        <h2><?=$team?></h2>
+        <p>
+            Qualification methode: <?=$info["qualification-methode"]?>
+        </p>
+    <?php endforeach;?>
 </body>
 </html>
