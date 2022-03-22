@@ -1,12 +1,12 @@
 <?php
     $teams = array(
         "Qatar" => array(
-            "qualification-methode" => "Hosts",
-            "previous-preformance" => " - ",
+            "qualification_methode" => "Hosts",
+            "previous_preformance" => " - ",
             "rank" => 1,
 
             "players" => array(
-                "Name" => array(
+                "name" => array(
                     "age" => 23,
                     "goals" => 0,
                 ),
@@ -27,9 +27,24 @@
 <body>
     <?php foreach ($teams as $team => $info): ?>
         <h2><?=$team?></h2>
-        <p>
-            Qualification methode: <?=$info["qualification-methode"]?>
-        </p>
+        <table>
+            <tr>
+                <td>Rank:</td>
+                <td><?=$info["rank"]?></td>
+            </tr>
+            <tr>
+                <td>Qualification methode:</td>
+                <td><?=$info["qualification_methode"]?></td>
+            </tr>
+            <tr>
+                <td>Previous Preformance:</td>
+                <td><?=$info["previous_preformance"]?></td>
+            </tr>
+            <tr>
+                <td>Players:</td>
+                <td><?php print_r($info["players"])?></td>
+            </tr>
+        </table>
     <?php endforeach;?>
 </body>
 </html>
