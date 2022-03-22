@@ -7,6 +7,14 @@
     font-family: sans-serif;
 }
 
+h1 {
+    font-size: 2.5vmin;
+}
+
+h2 {
+    font-size: 2.5vmin;
+}
+
 #controls {
     grid-area: controls;
     padding: 10px;
@@ -29,7 +37,7 @@
 
 .eventBox {
     width: 96%;
-    height: 160px;
+    height: min-content;
     padding: 5px;
     margin: 5px;
     border: solid black;
@@ -38,7 +46,7 @@
     transition: 0.5s;
     display: grid;
     grid-template-columns: 40px 2fr 1fr;
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
         'eventBoxLeft1 eventBoxLeft1 eventBoxRight1'
         'mapIcon eventBoxLeft2 eventBoxRight2'
@@ -54,24 +62,24 @@
     content: '';
     display: block;
     position: absolute;
-    width: 20%;
-    height: 160px;
-    top: -3px;
-    left: 0;
+    width: 21%;
+    height: 108%;
+    top: -5px;
+    left: -1%;
     border: solid white;
-    border-width: 3px 0px 3px;
+    border-width: 7px 0px 9px;
 }
 
 .eventBox:after {
     content: '';
     display: block;
     position: absolute;
-    width: 20%;
-    height: 160px;
-    top: -3px;
+    width: 21%;
+    height: 108%;
+    top: -5px;
     left: 80%;
     border: solid white;
-    border-width: 3px 0px 3px;
+    border-width: 7px 0px 9px;
 }
 
 .eventTitle {
@@ -84,7 +92,8 @@
 }
 
 .mapPinIcon {
-    height: 36px;
+    margin-top: 10px;
+    height: 2.5vmin;
     grid-area: mapIcon;
 }
 
@@ -109,8 +118,18 @@
 
 #noneFound {
     display: none;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    width: max-content;
 }
 
 .eventClose {
     opacity: 0.5;
+}
+
+#searchDateInput {
+    display: block;
+    position: inherit;
+    width: 30%;
 }
