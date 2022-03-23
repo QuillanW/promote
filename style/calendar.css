@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    overflow-x: overlay;
+    max-height: 90vh;
 }
 
 nav {
@@ -54,6 +54,11 @@ h1 {
 
 h2 {
     font-size: 2.5vmin;
+}
+
+p {
+    margin-top: 25%;
+    height: 50%;
 }
 
 #controls {
@@ -158,6 +163,7 @@ h2 {
     margin-top: 100px;
     text-align: center;
     width: max-content;
+    position: fixed;
 }
 
 .eventClose {
@@ -168,4 +174,48 @@ h2 {
     display: block;
     position: inherit;
     width: 30%;
+}
+
+#calendarContainer {
+    width: 500px;
+    margin-top: 10px;
+}
+
+.calendarDay {
+    width: 60px;
+    height: 60px;
+    border: solid black 2px;
+    margin: 2px;
+    text-align: center;
+    float: left;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.monthSelectorBox {
+    margin: auto;
+    margin-top: 50px;
+    width: max-content;
+    height: 50px;
+}
+
+#monthDisplay {
+    width: 200px;
+    float: left;
+    text-align: center;
+}
+
+.monthSelector {
+    width: 50px;
+    height: 50PX;
+    float: left;
+    cursor: pointer;
+}
+
+.monthSelector:hover {
+    transform: scale(1.1);
+}
+
+.selected {
+    background-color: lightgrey;
 }

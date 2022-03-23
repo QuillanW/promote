@@ -6,12 +6,85 @@ const searchDateInput = document.getElementById('searchDateInput')
 const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-searchDateInput.addEventListener('change', searchEvents)
+let currentMonth = 0
+let clickedButton
 
 container.onload = updateEvents(), createCalendar()
 
 function createCalendar() {
+    
+    
+    var newMonthSelectorBox = document.createElement('div')
+    newMonthSelectorBox.classList.add('monthSelectorBox')
 
+    var newMonthSelectorBack = document.createElement('h1')
+    newMonthSelectorBack.id = 'monthSelectorBack'
+    newMonthSelectorBack.classList.add('monthSelector')
+    newMonthSelectorBack.innerHTML = '◄'
+    newMonthSelectorBack.addEventListener('click', changeMonth)
+    newMonthSelectorBox.appendChild(newMonthSelectorBack)
+
+    var newMonthDisplay = document.createElement('h1')
+    newMonthDisplay.innerHTML = 'January'
+    newMonthDisplay.id = 'monthDisplay'
+    newMonthSelectorBox.appendChild(newMonthDisplay)
+
+    var newMonthSelectorNext = document.createElement('h1')
+    newMonthSelectorNext.id = 'monthSelectorNext'
+    newMonthSelectorNext.classList.add('monthSelector')
+    newMonthSelectorNext.innerHTML = '►'
+    newMonthSelectorNext.addEventListener('click', changeMonth)
+    newMonthSelectorBox.appendChild(newMonthSelectorNext)
+
+    controlsBox.appendChild(newMonthSelectorBox)
+    
+    var newCalendarContainer = document.createElement('div')
+    newCalendarContainer.id = 'calendarContainer'
+    for (let i = 1; i <= 31; i++) {
+        var newCalendarDay = document.createElement('div')
+        newCalendarDay.id = 'day' + i
+        newCalendarDay.classList.add('calendarDay')
+        var newCalenderDayText = document.createElement('p')
+        newCalenderDayText.innerHTML = i
+        newCalenderDayText.id = 'dayText'
+        newCalendarDay.appendChild(newCalenderDayText)
+        newCalendarDay.addEventListener('click', searchEvents)
+        newCalendarContainer.appendChild(newCalendarDay)
+    }
+    controlsBox.appendChild(newCalendarContainer)
+}
+
+function changeMonth() {
+    if (event.target.id.replace('monthSelector', '') == 'Next') {
+        currentMonth++
+    } else {
+        currentMonth--
+    }
+    if (currentMonth == -1) {
+        currentMonth = 11
+    } else if (currentMonth == 12) {
+        currentMonth = 0
+    }
+    
+    document.getElementById('monthDisplay').innerHTML = month[currentMonth]
+
+    document.getElementById('day29').style.display = ''
+    document.getElementById('day30').style.display = ''
+    document.getElementById('day31').style.display = ''
+
+    let monthFix = 0
+
+    if (currentMonth > 6) {
+        monthFix = 1
+    }
+
+    if (currentMonth == 1) {
+        document.getElementById('day29').style.display = 'none'
+        document.getElementById('day30').style.display = 'none'
+        document.getElementById('day31').style.display = 'none'
+    } else if ((currentMonth + monthFix) % 2 != 0) {
+        document.getElementById('day31').style.display = 'none'
+    }
 }
 
 function updateEvents() {
@@ -61,6 +134,17 @@ function updateEvents() {
 }
 
 function searchEvents() {
+    if (clickedButton != undefined) {
+        clickedButton.classList.remove('selected')
+    }
+    if (event.target.id == 'dayText') {
+        clickedButton = event.target.parentElement
+    } else {
+        clickedButton = event.target
+    }
+    
+    clickedButton.classList.add('selected')
+
     document.getElementById('noneFound').style.display = 'none'
     for (let i = 1; allEvents['event' + i]; i++) {
         if (allEvents['event' + i]['date'] != searched) {
@@ -69,7 +153,25 @@ function searchEvents() {
         }
     }
     let amountFound = 0
-    var searched = searchDateInput.value
+    let targetDay = 01
+    let targetMonth = 01
+
+    if (event.target.id.replace('day', '') < 10) {
+        targetDay = '0' + clickedButton.id.replace('day', '')
+    } else {
+        targetDay = clickedButton.id.replace('day', '')
+    }
+
+    if ((currentMonth + 1) < 10) {
+        targetMonth = '0' + (currentMonth + 1)
+    } else {
+        targetMonth = currentMonth + 1
+    }
+
+    var searched = `2022-${targetMonth}-${targetDay}`
+
+    console.log(searched)
+
     if (searched != '') {
         for (let i = 1; allEvents['event' + i]; i++) {
             if (allEvents['event' + i]['date'] != searched) {
@@ -81,8 +183,10 @@ function searchEvents() {
             var today = new Date(searched)
             var yesterday = new Date(searched)
             var tomorrow = new Date(searched)
+            
             yesterday.setDate(yesterday.getDate() - 1)
             tomorrow.setDate(tomorrow.getDate() + 1)
+            
             if (((new Date(allEvents['event' + i]['date'])).getTime() == yesterday.getTime() || (new Date(allEvents['event' + i]['date'])).getTime() == tomorrow.getTime()) && (new Date(allEvents['event' + i]['date'])).getTime() != today.getTime()) {
                 document.getElementById('eventBox' + i).classList.add('eventClose')
                 document.getElementById('eventBox' + i).style.display = ''

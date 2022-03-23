@@ -12,7 +12,7 @@ const allEvents = {
     event9: { title: "sampleName2", date: "2022-03-29", time: "16:00", location: "sampleLocation2", info: "sampleEvent2" },
     event10: { title: "sampleName2", date: "2022-03-29", time: "16:00", location: "sampleLocation2", info: "sampleEvent2" },
     event11: { title: "sampleName2", date: "2022-03-30", time: "16:00", location: "sampleLocation2", info: "sampleEvent2" },
-    event12: { title: "sampleName2", date: "2022-04-2", time: "16:00", location: "sampleLocation2", info: "sampleEvent2" },
-    event13: { title: "sampleName2", date: "2022-04-3", time: "16:00", location: "sampleLocation2", info: "sampleEvent2" },
-    event14: { title: "sampleName2", date: "2022-04-3", time: "16:00", location: "sampleLocation2", info: "sampleEvent2" },
+    event12: { title: "sampleName2", date: "2022-04-02", time: "16:00", location: "sampleLocation2", info: "sampleEvent2" },
+    event13: { title: "sampleName2", date: "2022-04-03", time: "16:00", location: "sampleLocation2", info: "sampleEvent2" },
+    event14: { title: "sampleName2", date: "2022-04-03", time: "16:00", location: "sampleLocation2", info: "sampleEvent2" },
 }
