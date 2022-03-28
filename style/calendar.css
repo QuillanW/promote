@@ -51,10 +51,12 @@ nav {
 
 h1 {
     font-size: 2.5vmin;
+    color: rgb(180, 180, 180);
 }
 
 h2 {
     font-size: 2.5vmin;
+    color: rgb(180, 180, 180);
 }
 
 p {
@@ -104,7 +106,7 @@ p {
     height: 108%;
     top: -5px;
     left: -1%;
-    border: solid white;
+    border: solid #2B303A;
     border-width: 7px 0px 9px;
 }
 
@@ -116,13 +118,13 @@ p {
     height: 108%;
     top: -5px;
     left: 80%;
-    border: solid white;
+    border: solid #2B303A;
     border-width: 7px 0px 9px;
 }
 
 .eventBox:hover {
     transform: scale(1.01);
-    box-shadow: 2px 2px 2px 2px lightgrey;
+    box-shadow: 2px 2px 2px 2px #2B303A;
 }
 
 .eventTitle {
@@ -130,7 +132,7 @@ p {
 }
 
 .eventLocation {
-    color: rgb(167, 167, 167);
+    color: rgb(231, 231, 231);
     grid-area: eventBoxLeft2;
 }
 
@@ -187,7 +189,8 @@ p {
 .calendarDay {
     width: 60px;
     height: 60px;
-    border: solid black 2px;
+    border: solid rgb(180, 180, 180) 2px;
+    color: rgb(180, 180, 180);
     margin: 2px;
     text-align: center;
     float: left;
@@ -209,25 +212,28 @@ p {
 }
 
 .monthSelector {
+    text-align: center;
     width: 50px;
-    height: 50PX;
+    height: 50pX;
     float: left;
     cursor: pointer;
 }
 
 .monthSelector:hover {
+    transition: 0.2s;
     transform: scale(1.1);
 }
 
 .selected {
-    background-color: lightgrey;
+    background-color: #DA2C43;
 }
 
 #clearButton {
     margin: auto;
     margin-top: 350px;
     width: 200px;
-    border: solid black 2px;
+    border: solid rgb(180, 180, 180) 2px;
+    color: rgb(180, 180, 180);
     font-size: 150%;
     text-align: center;
     padding: 5px;
