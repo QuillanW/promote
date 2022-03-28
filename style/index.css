@@ -173,6 +173,10 @@ footer{
     height: 15vh;
     margin-top: 0vh;
 }
+.footerimg2{
+    height: 15vh;
+    margin-top: 0vh;
+}
 .footerimg:hover{
    transform: scale(1.2);
    transition-duration: 1s;
