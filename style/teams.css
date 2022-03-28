@@ -30,3 +30,32 @@ nav{
 }
 
 /* end navbar */
+
+body{
+background-color: #32353b; 
+}
+
+.container{
+    align-content: center;
+}
+#spelersN{
+    text-align: left;
+}
+
+footer{
+    box-shadow:#E15566 0px 0px 10px 10px;
+    background:linear-gradient(to left,#32353b, #4b5363, #32353b);
+}
+.footerimg{
+    height: 15vh;
+    margin-top: 0vh;
+}
+.footerimg:hover{
+   transform: scale(1.2);
+   transition-duration: 1s;
+}
+
+#logo{
+    box-shadow:#32353b 0px 0px 30px 10px;
+}
+
