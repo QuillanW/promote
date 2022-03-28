@@ -1,7 +1,7 @@
 //Date is yyyy/mm/dd
 const allEvents = {
     event0: { title: "sample", date: "2022-01-01", time: "00:00", location: "sample", info: "sample" },
-    event1: { title: "sampleName1", date: "2022-03-21", time: "13:00", location: "sampleLocation1", info: "sampleEvent1"},
+    event1: { title: "sampleName1", date: "2022-10-11", time: "13:00", location: "Stadion 1", info: "sampleEvent1"},
     event2: { title: "sampleName2", date: "2022-03-22", time: "16:00", location: "sampleLocation2", info: "sampleEvent2" },
     event3: { title: "sampleName2", date: "2022-03-22", time: "16:00", location: "sampleLocation2", info: "sampleEvent2" },
     event4: { title: "sampleName2", date: "2022-03-24", time: "16:00", location: "sampleLocation2", info: "sampleEvent2" },

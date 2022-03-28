@@ -12,8 +12,6 @@ let clickedButton
 container.onload = updateEvents(), createCalendar()
 
 function createCalendar() {
-    
-    
     var newMonthSelectorBox = document.createElement('div')
     newMonthSelectorBox.classList.add('monthSelectorBox')
 
@@ -51,7 +49,15 @@ function createCalendar() {
         newCalendarDay.addEventListener('click', searchEvents)
         newCalendarContainer.appendChild(newCalendarDay)
     }
+    
     controlsBox.appendChild(newCalendarContainer)
+
+    var newClearButton = document.createElement('div')
+    newClearButton.id = 'clearButton'
+    newClearButton.addEventListener('click', searchEvents)
+    newClearButton.innerHTML = 'Clear Selection'
+
+    controlsBox.appendChild(newClearButton)
 }
 
 function changeMonth() {
@@ -168,9 +174,11 @@ function searchEvents() {
         targetMonth = currentMonth + 1
     }
 
-    var searched = `2022-${targetMonth}-${targetDay}`
+    var searched = ''
 
-    console.log(searched)
+    if (clickedButton.id != 'clearButton') {
+        searched = `2022-${targetMonth}-${targetDay}`
+    }
 
     if (searched != '') {
         for (let i = 1; allEvents['event' + i]; i++) {

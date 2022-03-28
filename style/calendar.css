@@ -65,6 +65,7 @@ p {
     grid-area: controls;
     padding: 10px;
     position: fixed;
+    width: 40%;
 }
 
 #events {
@@ -177,7 +178,8 @@ p {
 }
 
 #calendarContainer {
-    width: 500px;
+    margin: auto;
+    width: 95%;
     margin-top: 10px;
 }
 
@@ -218,4 +220,14 @@ p {
 
 .selected {
     background-color: lightgrey;
+}
+
+#clearButton {
+    margin: auto;
+    margin-top: 350px;
+    width: 200px;
+    border: solid black 2px;
+    font-size: 150%;
+    text-align: center;
+    padding: 5px;
 }
