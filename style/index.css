@@ -112,8 +112,7 @@ div.child{
     border-radius: 40px;
     margin-left: 20px;
     text-align: left; 
-    padding:  40px;
-    
+    padding:  40px;    
 }
 div.child > h1{
     text-align: center; 
