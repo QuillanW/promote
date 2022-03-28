@@ -29,41 +29,4 @@ nav{
     font-weight: bolder;
 }
 
-.navClass > ul > li:hover {
-    background-color: #3838384d;
-    
-}
-ul.submenu{
-    position: absolute;
-    background-color: #243c5379;
-    list-style-type: none;
-    width: auto;
-    padding-left: 0px;
-    margin-left: -25px;
-    margin-top: 5px;
-    padding-top: 5px;
-    opacity: 0;
-   font-weight: lighter;
-}
-
-ul.submenu li:hover{
-    background-color: #5e5d5d7e;
-}
-ul.submenu li{
-    padding-left: 25px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 25px;
-
-}
-ul.submenu li > a {
-    text-decoration: none;
-}
-ul.submenu li > a:visited {
-    text-decoration: none;
-}
-.navClass li:hover .submenu{
-    opacity: 1;
-}
-
 /* end navbar */
