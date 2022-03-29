@@ -2,7 +2,7 @@ body {
     margin: 0;
     max-height: 90vh;
     background-color: #2B303A;
-    
+
 }
 
 nav {
@@ -75,6 +75,7 @@ p {
 #events {
     grid-area: events;
     padding: 10px;
+    margin-bottom: 15vh;
 }
 
 ::-webkit-scrollbar {
@@ -238,4 +239,54 @@ p {
     font-size: 150%;
     text-align: center;
     padding: 5px;
+}
+
+div.parent3 {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+
+}
+
+div.child3 {
+    width: 100vw;
+    height: auto;
+    box-sizing: border-box;
+    border: 2px solid var(--colorBorder);
+    border-radius: 40px;
+    margin-left: 20px;
+    text-align: center;
+    padding: 40px;
+}
+
+footer {
+    transform: scale(0.5);
+    width: 200%;
+    margin-left: -50%;
+    top: 80vh;
+    position: fixed;
+    box-shadow: #E15566 0px 0px 10px 10px;
+    background: linear-gradient(to left, #32353b, #4b5363, #32353b);
+}
+
+.footerimg {
+    height: 15vh;
+    margin: auto;
+    margin-top: 0vh;
+}
+
+.footerimg2 {
+    height: 15vh;
+    margin-top: 0vh;
+}
+
+.footerimg:hover {
+    transform: scale(1.2);
+    transition-duration: 1s;
+}
+
+#logo {
+    box-shadow: #32353b 0px 0px 30px 10px;
 }
