@@ -42,11 +42,38 @@ background-color: #32353b;
     text-align: left;
 }
 
+div.parent3{
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    vertical-align:middle;
+    
+}
+div.child3{
+    width: 100vw;
+    height: auto;
+    
+    box-sizing: border-box;
+    border: 2px solid var(--colorBorder);
+    border-radius: 40px;
+    margin-left: 20px;
+    text-align: center; 
+    padding:  40px;
+    
+    
+}
+
 footer{
     box-shadow:#E15566 0px 0px 10px 10px;
     background:linear-gradient(to left,#32353b, #4b5363, #32353b);
 }
+
 .footerimg{
+    height: 15vh;
+    margin-top: 0vh;
+}
+.footerimg2{
     height: 15vh;
     margin-top: 0vh;
 }
