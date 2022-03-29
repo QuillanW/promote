@@ -28,6 +28,10 @@ nav{
     color: black;
     font-weight: bolder;
 }
+.navClass > ul > li:hover {
+    background-color: #3838384d;
+    
+}
 
 /* end navbar */
 
