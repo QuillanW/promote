@@ -11,6 +11,7 @@ body{
     color: white;
     overflow-wrap: normal;
     word-wrap: break-word;
+    overflow-x: hidden;
 }
 header {
     height: 100vh;
@@ -130,7 +131,7 @@ div.parent2{
     vertical-align:middle;
 }
 div.child2{
-    width: auto;
+    width: 50vw;
     height: auto;
     background: var(--colorChild);
     box-sizing: border-box;
@@ -143,6 +144,24 @@ div.child2{
 }
 div.child2 > h1{
     text-align: center; 
+    
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    transform:rotate(-6deg);
+}
+  
+td, th {
+    border: 1px solid #E97E88;
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: #4b5363;
 }
 
 div.parent3{
@@ -173,12 +192,12 @@ footer{
 }
 
 .footerimg{
-    height: 15vh;
+    height: 10vh;
     margin-top: 0vh;
     width: auto;
 }
 .footerimg2{
-    height: 15vh;
+    height: 10vh;
     margin-top: 0vh;
     width: auto;
 }
