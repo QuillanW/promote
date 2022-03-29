@@ -265,7 +265,7 @@ footer {
     transform: scale(0.5);
     width: 200%;
     margin-left: -50%;
-    top: 80vh;
+    top: 83vh;
     position: fixed;
     box-shadow: #E15566 0px 0px 10px 10px;
     background: linear-gradient(to left, #32353b, #4b5363, #32353b);
@@ -280,6 +280,7 @@ footer {
 .footerimg2 {
     height: 15vh;
     margin-top: 0vh;
+    margin: auto;
 }
 
 .footerimg:hover {
