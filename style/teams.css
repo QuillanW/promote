@@ -90,3 +90,32 @@ footer{
     box-shadow:#32353b 0px 0px 30px 10px;
 }
 
+
+.parent {
+    background-color: #393a3d;
+    color: white;
+    box-shadow:#E15566 0px 0px 10px 10px;
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 2fr) 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .Nederland { grid-area: 1 / 2 / 2 / 3; }
+    .belgië { grid-area: 2 / 2 / 3 / 3; }
+    .Duitsland { grid-area: 3 / 2 / 4 / 3; }
+    .Engeland { grid-area: 4 / 2 / 5 / 3; }
+    .Spanje { grid-area: 5 / 2 / 6 / 3; }
+    .Zwitserland { grid-area: 1 / 3 / 2 / 4; }
+    .Servië { grid-area: 2 / 3 / 3 / 4; }
+    .Kroatië { grid-area: 3 / 3 / 4 / 4; }
+    .Frankrijk{ grid-area: 4 / 3 / 5 / 4; }
+    .Denemarken { grid-area: 5 / 3 / 6 / 4; }
+    .Argentinië { grid-area: 1 / 4 / 2 / 5; }
+    .Brazilië { grid-area: 2 / 4 / 3 / 5; }
+    .Iran { grid-area: 3 / 4 / 4 / 5; }
+    .Zuid-Korea { grid-area: 4 / 4 / 5 / 5; }
+    .empty { grid-area: 5 / 4 / 6 / 5; }
+
+   
