@@ -94,7 +94,7 @@ footer{
 .parent {
     background-color: #393a3d;
     color: white;
-    box-shadow:#E15566 0px 0px 10px 10px;
+    
     display: grid;
     grid-template-columns: 1fr repeat(3, 2fr) 1fr;
     grid-template-rows: repeat(5, 1fr);
@@ -116,6 +116,6 @@ footer{
     .Brazilië { grid-area: 2 / 4 / 3 / 5; }
     .Iran { grid-area: 3 / 4 / 4 / 5; }
     .Zuid-Korea { grid-area: 4 / 4 / 5 / 5; }
-    .empty { grid-area: 5 / 4 / 6 / 5; }
+    .VS { grid-area: 5 / 4 / 6 / 5; }
 
    
