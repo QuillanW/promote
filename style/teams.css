@@ -173,3 +173,13 @@ footer {
 .VS {
     grid-area: 5 / 4 / 6 / 5;
 }
+
+.flag{
+    margin-bottom: 1vh;
+    width: 20vw;
+}
+
+img{
+    border-radius: 10px;
+    box-shadow: #4b5363 0px 0px 100px 5px;
+}
