@@ -37,6 +37,7 @@ nav {
 
 body {
     background-color: #32353b;
+    overflow-x: hidden;
 }
 
 .container {
@@ -105,7 +106,7 @@ footer {
 .parent {
     background-color: #393a3d;
     color: white;
-
+    margin-bottom: 12vh;
     display: grid;
     grid-template-columns: 1fr repeat(3, 2fr) 1fr;
     grid-template-rows: repeat(5, 1fr);
