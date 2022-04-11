@@ -126,7 +126,6 @@ p {
 
 .eventBox:hover {
     transform: scale(1.01);
-    box-shadow: 2px 2px 2px 2px #2B303A;
 }
 
 .eventTitle {

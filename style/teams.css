@@ -1,26 +1,25 @@
-
 /* navbar */
-nav{
+nav {
     margin-top: -1px;
     width: 100vw;
     height: 10vh;
-    border-top: 1px solid rgba(255,255,255,.2);
+    border-top: 1px solid rgba(255, 255, 255, .2);
     position: sticky;
     top: -2px;
     z-index: 1;
 }
 
 
-.navClass > ul{
-    background:linear-gradient(to left,#DA2C43,#E15566, #E97E88,#E15566,#DA2C43);
+.navClass>ul {
+    background: linear-gradient(to left, #DA2C43, #E15566, #E97E88, #E15566, #DA2C43);
     font-size: 1.5rem;
     font-family: sans-serif;
     margin-top: 0px;
-    
-   
+
+
 }
 
-.navClass > ul > li {
+.navClass>ul>li {
     list-style-type: none;
     display: inline-block;
     padding: 5px 25px;
@@ -28,94 +27,148 @@ nav{
     color: black;
     font-weight: bolder;
 }
-.navClass > ul > li:hover {
+
+.navClass>ul>li:hover {
     background-color: #3838384d;
-    
+
 }
 
 /* end navbar */
 
-body{
-background-color: #32353b; 
+body {
+    background-color: #32353b;
 }
 
-.container{
+.container {
     align-content: center;
 }
-#spelersN{
+
+#spelersN {
     text-align: left;
 }
 
-div.parent3{
+div.parent3 {
     display: flex;
     height: auto;
     align-items: center;
     justify-content: center;
-    vertical-align:middle;
-    
+    vertical-align: middle;
+
 }
-div.child3{
+
+div.child3 {
     width: 100vw;
     height: auto;
-    
+
     box-sizing: border-box;
     border: 2px solid var(--colorBorder);
     border-radius: 40px;
     margin-left: 20px;
-    text-align: center; 
-    padding:  40px;
-    
-    
+    text-align: center;
+    padding: 40px;
+
+
 }
 
-footer{
-    box-shadow:#E15566 0px 0px 10px 10px;
-    background:linear-gradient(to left,#32353b, #4b5363, #32353b);
+footer {
+    transform: scale(0.5);
+    width: 200%;
+    margin-left: -50%;
+    top: 83vh;
+    position: fixed;
+    box-shadow: #E15566 0px 0px 10px 10px;
+    background: linear-gradient(to left, #32353b, #4b5363, #32353b);
 }
 
-.footerimg{
+.footerimg {
     height: 15vh;
+    margin: auto;
     margin-top: 0vh;
 }
-.footerimg2{
+
+.footerimg2 {
     height: 15vh;
     margin-top: 0vh;
-}
-.footerimg:hover{
-   transform: scale(1.2);
-   transition-duration: 1s;
+    margin: auto;
 }
 
-#logo{
-    box-shadow:#32353b 0px 0px 30px 10px;
+.footerimg:hover {
+    transform: scale(1.2);
+    transition-duration: 1s;
+}
+
+#logo {
+    box-shadow: #32353b 0px 0px 30px 10px;
 }
 
 
 .parent {
     background-color: #393a3d;
     color: white;
-    
+
     display: grid;
     grid-template-columns: 1fr repeat(3, 2fr) 1fr;
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    }
-    
-    .Nederland { grid-area: 1 / 2 / 2 / 3; }
-    .belgië { grid-area: 2 / 2 / 3 / 3; }
-    .Duitsland { grid-area: 3 / 2 / 4 / 3; }
-    .Engeland { grid-area: 4 / 2 / 5 / 3; }
-    .Spanje { grid-area: 5 / 2 / 6 / 3; }
-    .Zwitserland { grid-area: 1 / 3 / 2 / 4; }
-    .Servië { grid-area: 2 / 3 / 3 / 4; }
-    .Kroatië { grid-area: 3 / 3 / 4 / 4; }
-    .Frankrijk{ grid-area: 4 / 3 / 5 / 4; }
-    .Denemarken { grid-area: 5 / 3 / 6 / 4; }
-    .Argentinië { grid-area: 1 / 4 / 2 / 5; }
-    .Brazilië { grid-area: 2 / 4 / 3 / 5; }
-    .Iran { grid-area: 3 / 4 / 4 / 5; }
-    .Zuid-Korea { grid-area: 4 / 4 / 5 / 5; }
-    .VS { grid-area: 5 / 4 / 6 / 5; }
+}
 
-   
+.Nederland {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.belgië {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.Duitsland {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.Engeland {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.Spanje {
+    grid-area: 5 / 2 / 6 / 3;
+}
+
+.Zwitserland {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.Servië {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.Kroatië {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.Frankrijk {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+.Denemarken {
+    grid-area: 5 / 3 / 6 / 4;
+}
+
+.Argentinië {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.Brazilië {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.Iran {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+.Zuid-Korea {
+    grid-area: 4 / 4 / 5 / 5;
+}
+
+.VS {
+    grid-area: 5 / 4 / 6 / 5;
+}
