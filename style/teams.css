@@ -36,7 +36,7 @@ nav {
 /* end navbar */
 
 body {
-    background-color: #32353b;
+    background-color: #2B303A;
     overflow-x: hidden;
 }
 
@@ -104,7 +104,7 @@ footer {
 
 
 .parent {
-    background-color: #393a3d;
+    background-color: #2B303A;
     color: white;
     margin-bottom: 12vh;
     display: grid;
