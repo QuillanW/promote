@@ -270,3 +270,9 @@ img{
     transition-duration: 1s;
 
 }
+
+.Kroatië:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
