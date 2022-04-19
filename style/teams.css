@@ -183,3 +183,90 @@ img{
     border-radius: 10px;
     box-shadow: #4b5363 0px 0px 100px 5px;
 }
+
+
+/* hover */
+
+.Nederland:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+
+
+.belgië:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+
+.Zwitserland:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+
+
+.Brazilië:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+
+.Denemarken:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+
+.Argentinië:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+
+.Engeland:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+
+.Servië:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+
+.Spanje:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+
+.Duitsland:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+.Frankrijk:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+
+.Zuid-Korea:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+.Iran:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
+
+.VS:hover{
+    transform: scale(1.2);
+    transition-duration: 1s;
+
+}
